@@ -32,6 +32,12 @@ public class School implements Comparable<School> {
         return schoolCapacity;
     }
 
+    /**
+     * @param o = another object of type School
+     * @return 0: if the 2 objects are equal
+     * positive value: if the current object is greater than the other
+     * negative value: if the current object is smaller than the other
+     */
     @Override
     public int compareTo(School o) {
         return this.schoolName.compareTo(o.getSchoolName());
