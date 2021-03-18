@@ -1,15 +1,12 @@
 package optional;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Solution {
     private Map<Student, School >pairs = new HashMap<Student, School>();
 
-    public Solution(Map<Student, School> pairs) {
-        this.pairs = pairs;
+    public Solution(Problem p) {
+        pairs = getSolution(p);
     }
 
     public Solution() {
@@ -28,5 +25,24 @@ public class Solution {
         return "Solution{" +
                 "pairs=" + pairs +
                 '}';
+    }
+    public Map<Student, School> getSolution(Problem p)
+    {
+        LinkedList<Student> listAux = new LinkedList<>();
+        Map<Student, School >pairs2 = new HashMap<Student, School>();
+        listAux=p.getListOfStudents();
+        for(Student st : listAux)
+        {
+            for(School sc : p.getStudentsPreferences().get(st))
+            {
+                if(sc.getSchoolCapacity()>0)
+                {
+                    sc.setSchoolCapacity(sc.getSchoolCapacity()-1);
+                    pairs2.put(st, sc);
+                    break;
+                }
+            }
+        }
+        return pairs2;
     }
 }

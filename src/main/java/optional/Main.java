@@ -1,5 +1,8 @@
 package optional;
 
+
+//import com.github.javafaker.Faker;
+
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -46,8 +49,8 @@ public class Main {
         studentsPreferences.put(students[3], Arrays.asList(schools[0], schools[2]));
 
         Map<School, List<Student>> schoolsPreferences = new HashMap<School, List<Student>>();
-        schoolsPreferences.put(schools[0], Arrays.asList(students[3], students[0], students[1], students[2]));
-        schoolsPreferences.put(schools[1], Arrays.asList(students[0], students[2], students[1]));
+        schoolsPreferences.put(schools[0], Arrays.asList(students[0], students[1], students[2], students[3]));
+        schoolsPreferences.put(schools[1], Arrays.asList(students[0], students[1], students[2]));
         schoolsPreferences.put(schools[2], Arrays.asList(students[0], students[1], students[3]));
         Problem p = new Problem();
         p.setListOfSchools(treeSetOfSchools);
@@ -62,5 +65,12 @@ public class Main {
         listOfSchools.stream()
                 .filter(std -> schoolsPreferences.get(std).get(0).equals(listOfStudents.get(0)))
                 .forEach(System.out::println);
+        /*Faker faker = new Faker();
+
+        String name = faker.name().fullName(); // Miss Samanta Schmidt
+        String firstName = faker.name().firstName(); // Emory
+        String lastName = faker.name().lastName(); // Barton*/
+        Solution solve = new Solution(p);
+        System.out.println(solve);
     }
 }
