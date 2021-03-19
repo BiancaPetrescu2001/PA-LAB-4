@@ -37,6 +37,7 @@ Test your algorithm.
 ## Solved tasks
 
 As of today (15.03.2021) I have solved all tasks regarding the compulsory task.
+On 19th march 2021 I have solved all tasks regarding the optional, except for the one with JavaFaker.
 ## Build and run
 
 To compile and run my project I have typed the following commands in the terminal:
@@ -60,6 +61,27 @@ ame='H0', capacity=1}, School{name='H2', capacity=2}]}
 School preferences are:
 {School{name='H2', capacity=2}=[Student{nameStudent='S0'}, Student{nameStudent='S1'}, Student{nameStudent='S3'}], School{name='H0', capacity=1}=[Student{nameStudent='S3'}, Student{name
 Student='S0'}, Student{nameStudent='S1'}, Student{nameStudent='S2'}], School{name='H1', capacity=2}=[Student{nameStudent='S0'}, Student{nameStudent='S2'}, Student{nameStudent='S1'}]}
+```
+The output for the optional part is:
+```bash
+The list of students in order is:
+S0 S1 S2 S3
+The list of schools in order is:
+School{name='H0', capacity=1} School{name='H1', capacity=2} School{name='H2', capacity=2}
+Problem{listOfStudents=[Student{nameStudent='S0'}, Student{nameStudent='S1'}, Student{nameStudent='S2'}, Student{nameStudent='S3'}], listOfSchools=[School{name='H0', capacity=1}, Schoo
+l{name='H1', capacity=2}, School{name='H2', capacity=2}], studentsPreferences={Student{nameStudent='S0'}=[School{name='H0', capacity=1}, School{name='H1', capacity=2}, School{name='H2'
+, capacity=2}], Student{nameStudent='S1'}=[School{name='H0', capacity=1}, School{name='H1', capacity=2}, School{name='H2', capacity=2}], Student{nameStudent='S2'}=[School{name='H0', ca
+pacity=1}, School{name='H1', capacity=2}], Student{nameStudent='S3'}=[School{name='H0', capacity=1}, School{name='H2', capacity=2}]}, schoolsPreferences={School{name='H2', capacity=2}=
+[Student{nameStudent='S0'}, Student{nameStudent='S1'}, Student{nameStudent='S3'}], School{name='H0', capacity=1}=[Student{nameStudent='S0'}, Student{nameStudent='S1'}, Student{nameStud
+ent='S2'}, Student{nameStudent='S3'}], School{name='H1', capacity=2}=[Student{nameStudent='S0'}, Student{nameStudent='S1'}, Student{nameStudent='S2'}]}}
+Student{nameStudent='S0'}
+Student{nameStudent='S1'}
+School{name='H0', capacity=1}
+School{name='H1', capacity=2}
+School{name='H2', capacity=2}
+Solution{pairs={Student{nameStudent='S0'}=School{name='H0', capacity=0}, Student{nameStudent='S1'}=School{name='H1', capacity=0}, Student{nameStudent='S2'}=School{name='H1', capacity=0
+}, Student{nameStudent='S3'}=School{name='H2', capacity=1}}}
 
+```
 
 

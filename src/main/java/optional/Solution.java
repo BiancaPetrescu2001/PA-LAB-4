@@ -26,6 +26,16 @@ public class Solution {
                 "pairs=" + pairs +
                 '}';
     }
+
+    /**
+     *
+     * @param p : an Object of type Problem describing the input
+     * the algorithm used focuses on the idea of ranking students in order based, supposing that the input order
+     *          is the correct one; the students are assigned to their favourite school in order as long as the
+     *          school hasn't reached the maximum capacity
+     * @return a pair structured as a Map of a Students and the school he was assigned to
+     *
+     */
     public Map<Student, School> getSolution(Problem p)
     {
         LinkedList<Student> listAux = new LinkedList<>();
